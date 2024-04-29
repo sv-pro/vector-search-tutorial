@@ -8,6 +8,7 @@ load_dotenv()
 
 MONGODB_URI = getenv("MONGODB_URI")
 hf_token = getenv("HF_TOKEN")
+OPENAI_API_KEY = getenv("OPENAI_API_KEY")
 embedding_url = getenv("EMBEDDING_URL")
 
 # convert the string to an int

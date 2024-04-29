@@ -1,10 +1,12 @@
 import pymongo
 import openai
 
-# Set your OpenAI API key
-openai.api_key = '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'
+from settings import MONGODB_URI, OPENAI_API_KEY
 
-client = pymongo.MongoClient("mongodb+srv://beau:n9KkbZz60mfMPhWM@cluster0.svcxhgj.mongodb.net/?retryWrites=true&w=majority")
+# Set your OpenAI API key
+openai.api_key = OPENAI_API_KEY
+
+client = pymongo.MongoClient(MONGODB_URI)
 db = client.sample_mflix
 collection = db.embedded_movies
 

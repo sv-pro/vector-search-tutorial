@@ -1,3 +1,5 @@
+# OpenAI 
+openai==0.28
 pymongo[srv,tls]
 python-dotenv
 requests
