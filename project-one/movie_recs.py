@@ -70,20 +70,27 @@ for document in documents:
 if not documents:
   print("No results found")
   # remind the user to create the index
-  """
-  {
-    "mappings": {
-      "dynamic": true,
-      "fields": {
-        "plot_embedding_hf": {
-          "type": "knnVector",
-          "dimensions": 384,
-          "similarity": "dotProduct"
-        }
+  index_name = "PlotSemanticSearch"
+  
+  vector_index_def =  {
+    "fields": [
+      {
+        "numDimensions": 384,
+        "path": "plot_embedding_hf",
+        "similarity": "cosine",
+        "type": "vector"
       }
-    }
+    ]
   }
-  """
+  
+  instructions = f"Create a vector index named '{index_name}' with the following definition:\n{vector_index_def}"
+  print(instructions)
+  
+client.close()
 
+
+  
+  
+  
   
   
