@@ -1,0 +1,4 @@
+pymongo[srv,tls]
+python-dotenv
+requests
+sentence-transformers
