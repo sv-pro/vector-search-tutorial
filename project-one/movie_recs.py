@@ -35,8 +35,8 @@ else:
 
 # query = "imaginary characters from outer space at war"
 # query = "a love story"
-# query = "bandits rob a train"
-query = "a dictator comedy"
+query = "bandits rob a train"
+# query = "a dictator comedy"
 embedded_query = generate_embedding(query)
 
 # print(f"Query: {query}")
